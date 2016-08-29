@@ -6,7 +6,6 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,7 +15,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements ViewTreeObserver.OnGlobalLayoutListener {
 
     // component
     @BindView(R.id.textX1) EditText textX1;
@@ -41,17 +40,17 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         // get dynamic size imageView
-        imageView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-            @Override
-            public void onGlobalLayout() {
-                imageView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+        imageView.getViewTreeObserver().addOnGlobalLayoutListener(this);
+    }
 
-                drawerWidth = imageView.getWidth();
-                drawerHeight = imageView.getHeight();
+    @Override
+    public void onGlobalLayout() {
+        imageView.getViewTreeObserver().removeOnGlobalLayoutListener(this);
 
-                resetDrawer();
-            }
-        });
+        drawerWidth = imageView.getWidth();
+        drawerHeight = imageView.getHeight();
+
+        resetDrawer();
     }
 
     private void resetDrawer() {
@@ -90,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         int y2 = Integer.parseInt(textY2.getText().toString());
 
         canvas.drawLine(x1, y1, x2, y2, paint);
-        imageView.postInvalidate();
         imageView.postInvalidate();
     }
 
