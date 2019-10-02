@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DrawLine</string>
+    <string name="draw_line">Draw Line</string>
+    <string name="clear_points">Clear Points</string>
+    <string name="clear_lines">Clear Lines</string>
+    <string name="clear">Clear</string>
+    <string name="point_1">Point 1</string>
+    <string name="colon">:</string>
+    <string name="x1">x1</string>
+    <string name="y1">y1</string>
+    <string name="point_2">Point 2</string>
+    <string name="x2">x2</string>
+    <string name="y2">y2</string>
 </resources>

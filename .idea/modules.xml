@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DrawLine.iml" filepath="$PROJECT_DIR$/DrawLine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidDrawLine-master.iml" filepath="$PROJECT_DIR$/AndroidDrawLine-master.iml" group="AndroidDrawLine-master" />
+      <module fileurl="file://$PROJECT_DIR$/app/AndroidDrawLine-master-app.iml" filepath="$PROJECT_DIR$/app/AndroidDrawLine-master-app.iml" group="AndroidDrawLine-master/app" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
