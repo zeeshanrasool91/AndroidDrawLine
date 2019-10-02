@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements ViewTreeObserver.
             }
 
         });
-        bitmap = drawableToBitmap(ContextCompat.getDrawable(MainActivity.this, R.drawable.floorplan));
+        bitmap = drawableToBitmap(ContextCompat.getDrawable(MainActivity.this, R.drawable.floor_plan));
         Bitmap mutableBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true);
         canvas = new Canvas(mutableBitmap);
         //imageView.setImageBitmap(mutableBitmap);
